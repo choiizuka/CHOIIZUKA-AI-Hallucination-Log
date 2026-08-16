@@ -1,7 +1,10 @@
 このディレクトリへPDFファイルをプッシュすると自動的に改ざん不能なログが生成可能
 
+---
 # CHOIIZUKA-AI-Hallucination-Log
 CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
+
+## Google/Microsoft社などAIの誤出力による名誉毀損問題改竄防止ログ保存システム
 
 ### 推奨ワークフロー概要
 1. **PDFを `logs/` に push**  
