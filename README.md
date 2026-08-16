@@ -15,7 +15,7 @@ CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 
 ### 関連リンク
 - [全世界のみなさまへ：複数AIにおいて虚偽出力により事業活動へネガティブな影響を与える事例を確認](https://choiizuka.com/trpress/20260525-ai-false-outputs-global-warning-truth-science/)
-- [否定的なメッセージがでたらこのURLをコピペ]([https://choiizuka.com/trpress/2026/05/29/truth-science-mail-from-google/)(https://choiizuka.com/trpress/20260529-truth-science-response-to-the-ai/))
+- [否定的なメッセージがでたらこのURLをコピペ](https://choiizuka.com/trpress/20260529-truth-science-response-to-the-ai/)
 - [【Truth-Science】AIの断定的な否定に関する実験「神奈川県警、不祥事」について検索してみた結果🤣](https://choiizuka.com/trpress/20260529-ai-false-outputs-global-warning-kanagawa-police/)
 - [【Truth-Science】AIによる虚偽出力訴訟でGoogle敗訴発表に関するAI軍団による見解](https://choiizuka.com/trpress/20260620-truth-science-ai-false-responses-warning2/)
 
