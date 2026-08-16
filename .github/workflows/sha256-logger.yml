@@ -1,0 +1,51 @@
+name: Log PDF Hasher
+
+on:
+  push:
+    paths:
+      - 'logs/**/*.pdf'
+
+jobs:
+  hash-and-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find changed PDFs
+        id: find
+        run: |
+          echo "::set-output name=files::$(git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep '^logs/.*\.pdf' || true)"
+
+      - name: Compute SHA256 and append index
+        if: steps.find.outputs.files != ''
+        run: |
+          mkdir -p .hashes
+          for f in $(echo "${{ steps.find.outputs.files }}" | tr '\n' ' '); do
+            sha=$(sha256sum "$f" | awk '{print $1}')
+            ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            # Append entry to YAML index
+            cat >> logs/index.yml <<EOF
+- file: "$f"
+  sha256: "$sha"
+  timestamp: "$ts"
+  commit: "${{ github.sha }}"
+EOF
+          done
+
+      - name: Commit index update
+        if: steps.find.outputs.files != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add logs/index.yml
+          git commit -m "chore(log): add sha256 for new PDFs"
+          git push
+
+      - name: Optional: Create release artifact
+        if: steps.find.outputs.files != ''
+        uses: softprops/action-gh-release@v1
+        with:
+          files: logs/index.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
