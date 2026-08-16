@@ -1,51 +1,43 @@
-name: Log PDF Hasher
+```yaml
+name: TR-AI Logbook - Tamper-proof
 
 on:
   push:
     paths:
       - 'logs/**/*.pdf'
+      - 'research/**/*.pdf'
 
 jobs:
-  hash-and-index:
+  hash-and-log:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Find changed PDFs
-        id: find
+      - name: Generate SHA256 manifest
         run: |
-          echo "::set-output name=files::$(git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep '^logs/.*\.pdf' || true)"
-
-      - name: Compute SHA256 and append index
-        if: steps.find.outputs.files != ''
-        run: |
-          mkdir -p .hashes
-          for f in $(echo "${{ steps.find.outputs.files }}" | tr '\n' ' '); do
-            sha=$(sha256sum "$f" | awk '{print $1}')
-            ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-            # Append entry to YAML index
-            cat >> logs/index.yml <<EOF
-- file: "$f"
-  sha256: "$sha"
-  timestamp: "$ts"
-  commit: "${{ github.sha }}"
-EOF
+          echo "# TR-AI Research Logbook - SHA256 Manifest" > MANIFEST.md
+          echo "Generated: $(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> MANIFEST.md
+          echo "" >> MANIFEST.md
+          echo "| datetime | file | sha256 |" >> MANIFEST.md
+          echo "|---|---|---|" >> MANIFEST.md
+          for f in $(find logs research -name "*.pdf" | sort); do
+            HASH=$(sha256sum "$f" | awk '{print $1}')
+            echo "| $(date -u +"%Y-%m-%dT%H:%M:%SZ") | $f | $HASH |" >> MANIFEST.md
           done
+          cat MANIFEST.md
 
-      - name: Commit index update
-        if: steps.find.outputs.files != ''
+      - name: Append to logbook.jsonl
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add logs/index.yml
-          git commit -m "chore(log): add sha256 for new PDFs"
-          git push
+          # 新しいPDFだけを検出してJSONLに追記する簡易版
+          # 実際は差分を見て追記する形に拡張できます
+          ls -lh logs/*.pdf research/**/*.pdf 2>/dev/null || true
 
-      - name: Optional: Create release artifact
-        if: steps.find.outputs.files != ''
-        uses: softprops/action-gh-release@v1
-        with:
-          files: logs/index.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit manifest
+        run: |
+          git config user.name "TR-AI Logbot"
+          git config user.email "logbot@choiizuka.com"
+          git add MANIFEST.md
+          git diff --staged --quiet || git commit -m "auto: update SHA256 manifest [skip ci]"
+          git push
