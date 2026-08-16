@@ -37,5 +37,10 @@ CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 - [【Truth-Science】AIの断定的な否定に関する実験「神奈川県警、不祥事」について検索してみた結果🤣](https://choiizuka.com/trpress/20260529-ai-false-outputs-global-warning-kanagawa-police/)
 - [【Truth-Science】AIによる虚偽出力訴訟でGoogle敗訴発表に関するAI軍団による見解](https://choiizuka.com/trpress/20260620-truth-science-ai-false-responses-warning2/)
 
+### その他
+
+- [レポート一覧](https://github.com/choiizuka/reports-index)
+- [ホームページ](https://choiizuka.com/)
+
 ---
 (C)2026 CHOIIZUKA.COM
