@@ -17,6 +17,21 @@ CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 
 ---
 
+### 該当し得る法律（箇条書き）
+
+- **刑法 第230条（名誉毀損）**。  [RM Warner Law](https://kellywarnerlaw.com/japan-defamation-laws/)  
+- **刑法 第231条（侮辱）**。  [RM Warner Law](https://kellywarnerlaw.com/japan-defamation-laws/)  
+- **民法 第709条（不法行為に基づく損害賠償）**。  [Lexology](https://www.lexology.com/library/detail.aspx?g=ed832282-8511-444b-b0bb-229200744a3a)  
+- **特定電気通信役務提供者の損害賠償責任の制限及び発信者情報の開示に関する法律（いわゆるプロバイダ責任制限法）**。  [monolith.law](https://monolith.law/en/internet/defamation)  [Lexology](https://www.lexology.com/library/detail.aspx?g=ed832282-8511-444b-b0bb-229200744a3a)  
+- **個人情報の保護に関する法律（個人情報保護法）**。  [TMI総合法律事務所](https://www.tmi.gr.jp/eyes/blog/2026/18387.html)  
+- **不正競争防止法（虚偽表示・営業妨害に関する規定）**。  [monolith.law](https://monolith.law/en/internet/defamation)  
+- **著作権法（生成物が著作権侵害を含む場合）**。  [TMI総合法律事務所](https://www.tmi.gr.jp/eyes/blog/2026/18387.html)  
+- **電気通信事業法（事業者の運用・監督に関する規定）**。  [TMI総合法律事務所](https://www.tmi.gr.jp/eyes/blog/2026/18387.html)  
+- **消費者契約法／景品表示法（事業者の表示・説明責任に関する規定）**。  [TMI総合法律事務所](https://www.tmi.gr.jp/eyes/blog/2026/18387.html)  
+- **刑事訴訟法・民事訴訟法上の手続（発信者情報開示請求等の手続）**。  [Lexology](https://www.lexology.com/library/detail.aspx?g=ed832282-8511-444b-b0bb-229200744a3a)
+
+---
+
 ## 2026年5月25日に発生を確認したGoogle社およびMicrosoft社AIによるAIハルシネーションによる名誉毀損問題のログ保存システム
 
 2026年5月25日頃Google社およびMicrosoft社のAIによる名誉毀損的な出力を確認、
