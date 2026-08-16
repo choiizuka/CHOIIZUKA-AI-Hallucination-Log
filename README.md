@@ -1,13 +1,20 @@
 # CHOIIZUKA-AI-Hallucination-Log
 CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 
-### 推奨ワークフロー概要
-1. **PDFを `logs/` に push**  
-2. **GitHub Actions がトリガー**（`paths: logs/**/*.pdf`）  
-3. **Actions内で SHA256 を算出**し、メタ情報（日時・ファイル名・クエリ等）を YAML/JSONL に追加または新規作成  
-4. **GITHUB_TOKEN で自動コミット**（ハッシュ付きの index ファイルを更新）  
-5. **（任意）TSA でタイムスタンプ取得 or ブロックチェーン刻印** を並行実行して補強  
-6. **公開版は個人情報をマスクした要約、原本は非公開ストレージに保管**
+---
+
+## 2026年5月25日に発生を確認したGoogle社およびMicrosoft社AIによるAIハルシネーションによる名誉毀損問題のログ保存システム
+
+2026年5月25日頃Google社およびMicrosoft社のAIによる名誉毀損的な出力を確認、
+記録を各社へ送信したがその後数ヶ月におよび不誠実な回答メールが返信されてきていない問題に関する記録の公開
+
+また、調査によりこの問題の原因の特定はできていると認識しているがこの件については技術的知見のため無償での各社への提供は一切行わない
+なお、本件は削除要請ではなく正式な抗議及び苦情、および名誉毀損申立てを前提にしたログの公開である。
+
+### 関連リンク
+- [全世界のみなさまへ：複数AIにおいて虚偽出力により事業活動へネガティブな影響を与える事例を確認](https://choiizuka.com/trpress/20260525-ai-false-outputs-global-warning-truth-science/)
+- [否定的なメッセージがでたらこのURLをコピペ]([https://choiizuka.com/trpress/2026/05/29/truth-science-mail-from-google/](https://choiizuka.com/trpress/20260529-truth-science-response-to-the-ai/))
+- [【Truth-Science】AIの断定的な否定に関する実験「神奈川県警、不祥事」について検索してみた結果🤣](https://choiizuka.com/trpress/20260529-ai-false-outputs-global-warning-kanagawa-police/)
 
 ---
 (C)2026 CHOIIZUKA.COM
