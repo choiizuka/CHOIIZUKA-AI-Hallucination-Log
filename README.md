@@ -42,6 +42,9 @@ CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 
 また、2026年5〜6月にかけてドイツでの第１審においてGoogle社は敗訴の上、EUへ制裁金１件あたり25万ユーロ、日本円4600万円を宣告された事実がある。
 
+なお、この件で以下の事前にプレスリリース等で予告していた活動全てが停止している事実がある
+https://choiizuka.com/trpress/20260531-google-microsoft-ai-false-all-plan-suspended/
+
 ### 関連レポート
 
 - [Validation-Report-on-LLM-Against-Higher-Dimensional-Data](https://github.com/choiizuka/Validation-Report-on-LLM-Against-Higher-Dimensional-Data)
@@ -50,6 +53,7 @@ CHOIIZUKA-AI Hallucination Log ー AIハルシネーションログ
 - [全世界のみなさまへ：複数AIにおいて虚偽出力により事業活動へネガティブな影響を与える事例を確認](https://choiizuka.com/trpress/20260525-ai-false-outputs-global-warning-truth-science/)
 - [否定的なメッセージがでたらこのURLをコピペ](https://choiizuka.com/trpress/20260529-truth-science-response-to-the-ai/)
 - [【Truth-Science】AIの断定的な否定に関する実験「神奈川県警、不祥事」について検索してみた結果🤣](https://choiizuka.com/trpress/20260529-ai-false-outputs-global-warning-kanagawa-police/)
+- [【お知らせ】Google/Microsoft社AIの不当出力による事前に告知しました計画の全停止中⚠️](https://choiizuka.com/trpress/20260531-google-microsoft-ai-false-all-plan-suspended/)
 - [【Truth-Science】AIによる虚偽出力訴訟でGoogle敗訴発表に関するAI軍団による見解](https://choiizuka.com/trpress/20260620-truth-science-ai-false-responses-warning2/)
 
 ### その他
